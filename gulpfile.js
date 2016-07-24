@@ -29,21 +29,21 @@ gulp.task('html', function(){
 });
 
 
-// gulp.task('browser-sync', function(){
-//   browserSync.init({
-//     port: 8888,
-//     server: {
-//       baseDir: './'
-//     }
-//   })
-// });
-
-gulp.task('connect', function() {
-  connect.server({
-    root: '',
-    livereload: true
-  });
+gulp.task('browser-sync', function(){
+  browserSync.init({
+    port: 8888,
+    server: {
+      baseDir: './'
+    }
+  })
 });
+
+// gulp.task('connect', function() {
+//   connect.server({
+//     root: '',
+//     livereload: true
+//   });
+// });
 
 gulp.task('watch', function(){
   gulp.watch(srcDir + 'scss/**/*.scss', ['sass'])
@@ -51,4 +51,4 @@ gulp.task('watch', function(){
   gulp.watch('**/*.html', ['html'])
 });
 
-gulp.task('default', ['html', 'sass', 'js', /*'browser-sync',*/ 'watch'])
+gulp.task('default', ['html', 'sass', 'js', 'browser-sync', 'watch'])
