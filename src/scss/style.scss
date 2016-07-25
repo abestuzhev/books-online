@@ -41,7 +41,7 @@
 }
 
 body {
-  font-family: 'SegoeWP', sans-serif;
+  font-family: SegoeWP, sans-serif;
 }
 
 %outline {
@@ -164,6 +164,7 @@ ul {
 
 .c-title {
   font-size: 24px;
+  font-weight: 300;
   padding: 0;
   margin: 0;
   margin-left: 14px;
@@ -173,14 +174,47 @@ ul {
 
 .c-categories {
   float: left;
-  width: 187px;
+  width: 188px;
   background-color: #FFF;
   border: 1px solid rgba(0, 0, 1, 0.16);
-  padding: 10px 0;
   margin-right: 7px;
+  padding: 12px 0px 50px 16px;
+  box-sizing: border-box;
 
   &::after {
     @extend %clear;
+  }
+
+  .c-list-item a {
+    display: block;
+    text-decoration: none;
+    color: #696969;
+    font-size: 17px;
+    font-weight: 600;
+    margin: 10px 0;
+    transition: all .2s ease-out;
+
+    &:hover {
+      transition: all .2s ease-out;
+      text-decoration: underline;
+    }
+  }
+
+  .c-list-item_genre a {
+    display: block;
+    text-decoration: none;
+    color: #696969;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 5px;
+    margin: 0;
+
+    &:hover {
+      background-image: linear-gradient(to top, #79B260 0%, #92D774 100%);
+      color: #fff;
+
+      text-decoration: none;
+    }
   }
 }
 
@@ -192,7 +226,8 @@ ul {
   border: 1px solid #D8DCE0;
   font-size: 0;
   width: 782px;
-  padding: 16px 0px 27px 16px;
+  margin-bottom: 22px;
+  padding: 12px 0px 0px 16px;
   
   &::after {
     @extend %clear;
