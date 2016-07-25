@@ -1,7 +1,47 @@
-//footer
+@font-face {
+  font-family: 'SegoeWP';
+  src: url('../fonts/SegoeWP.woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SegoeWP-Black';
+  src: url('../fonts/SegoeWP-Black.woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SegoeWP-Bold';
+  src: url('../fonts/SegoeWP-Bold.woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SegoeWP-Light';
+  src: url('../fonts/SegoeWP-Light.woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SegoeWP-Semibold';
+  src: url('../fonts/SegoeWP-Semibold.woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SegoeWP-Semilight';
+  src: url('../fonts/SegoeWP-Semilight.woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 .footer {
   font-size: 0;
+}
+
+body {
+  font-family: 'SegoeWP', sans-serif;
 }
 
 %outline {
@@ -15,7 +55,6 @@
 }
 
 body {
-  // background-color: #eee;
 }
 
 p {
@@ -44,6 +83,15 @@ ul {
 
 .header-top {
   @extend %clear;
+  // height: 28px;
+
+  .ht-list {
+    margin-right: 31px;
+  }
+  a {
+    display: inline-block;  
+    padding: 5px 7px;
+  }
 }
 
 .ht-list {
@@ -59,7 +107,6 @@ ul {
 
 .header {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.01) 0%, rgba(255, 255, 255, 0.01) 100%);
-  height: 112px;
   // background-color: #000;
 
   &::after {
@@ -72,7 +119,8 @@ ul {
     width: 135px;
     height: 75px;
     margin-right: 42px;
-    background: url('../img/logo.png') no-repeat 50% 50%;  
+    background: url('../img/logo.png') no-repeat 50% 50%;
+    margin: 18px 0;  
   }
 
   .h-search {
@@ -94,8 +142,14 @@ ul {
 
 .menu {
   margin-bottom: 8px;
+
   .m-list-item {
     display: inline-block;
+  }
+
+  a {
+    display: inline-block;
+    padding: 11px;
   }
 }
 
@@ -113,6 +167,7 @@ ul {
   padding: 0;
   margin: 0;
   margin-left: 14px;
+  margin-bottom: 17px;
 }
 
 
@@ -122,6 +177,7 @@ ul {
   background-color: #FFF;
   border: 1px solid rgba(0, 0, 1, 0.16);
   padding: 10px 0;
+  margin-right: 7px;
 
   &::after {
     @extend %clear;
@@ -131,29 +187,56 @@ ul {
 
 
 .c-product {
-  float: right;
-  width: 800px;
-  padding: 13px;
+  float: left;;
   background-color: #FFF;
   border: 1px solid #D8DCE0;
   font-size: 0;
+  width: 782px;
+  padding: 16px 0px 27px 16px;
   
   &::after {
     @extend %clear;
   }
+  
+  .product-grid {width: 100%;margin-bottom: 15px;}
 
   .product-card {
-    @extend %outline;
+    // @extend %outline;
     display: inline-block;
     font-size: 16px;
     width: 108px;
-    height: 240px;
-    padding: 10px;
-    margin-right: 30px;
+    height: 225px;
+    margin-right: 35px;
+    padding: 5px 9px;
     margin-bottom: 20px;
 
-    &:nth-child(5n+1) {
+    &:nth-child(5n) {
       margin-right: 0px;
+    }
+
+    &_img {
+      width: 97px;
+      height: 150px;
+      border: 5px solid #FFF;
+      box-shadow: 0 0 16px rgba(0, 0, 0, 0.13);
+      margin-bottom: 4px;
+
+    }
+
+    &_title {
+      text-align: center;
+      color: #595959;
+      font-size: 15px;
+      font-weight: 400;
+      margin-bottom: 5px;
+      
+    }
+
+    &_price {
+      text-align: center;
+      color: #F05356;
+      font-size: 22px;
+      font-weight: 400;
     }
   }
 
@@ -161,6 +244,7 @@ ul {
     font-size: 16px;
     float: right;
     display: block;
+    margin-right: 50px;
 
     &-item {
       display: inline-block;
@@ -172,6 +256,8 @@ ul {
 
 .footer {
   font-size: 0;
+  color: #ddd;
+  background: url(../img/footer-bg.jpg) repeat 0 0;
 
   p {
     margin: 0;
@@ -179,24 +265,76 @@ ul {
     font-size: 16px;
   }
 
+  a {
+    display: inline-block;
+    padding: 5px 0;
+    font-size: 14px;
+    text-decoration: none;
+    opacity: 0.7;
+    color: #DDD;
+  }
+
   .f-col-4 {
-    @extend %outline;
-    display: inline-block;    
+    // @extend %outline;
+    display: inline-block;
+    box-sizing: border-box;    
     width: 25%;
     font-size: 16px;
     vertical-align: top;
+    padding-right: 25px;
+    margin-bottom: 5px;
+
+
+    &:nth-child(3),
+    &:nth-child(4) {
+      padding-left: 50px;
+    }
 
     .f-col-4_title {
       font-size: 20px;
       font-weight: 400;
+      margin-top: 22px;
     }
 
-    .f-list {
-
+    .f-list-item {
+      border-bottom: 1px solid rgba(222, 222, 222, 0.11);
     }
   }
 
   .f-banking {
+    padding: 25px 0 13px;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    background: url(../img/banking-bg.jpg) repeat 0 0;
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    &_card {
+      width: 149px;
+      margin: 0 auto;
+      // margin-bottom: 13px;
+
+      img:nth-child(2) {
+        margin: 0 4px;
+      }
+    }
+  }
+
+  .f-line {
+    width: 100%;
+    height: 1px;
+    background-color: #ddd;
+    opacity: 0.2;
+  }
+
+  .f-notice {
+    font-size: 16px;
+    font-weight: 400;
+    padding: 15px 0 30px;
+    text-align: center;
   }
 }
 
