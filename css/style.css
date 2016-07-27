@@ -40,7 +40,7 @@
 body {
   font-family: SegoeWP, sans-serif; }
 
-.wrap, .ht-list, .header .h-logo, .header .h-search, .header .h-basket-list, .header .h-bascket, .header .h-wishlist {
+.wrap, .ht-list, .header .h-logo, .header .h-search, .header .h-basket-list, .header .h-bascket, .header .h-bascket .h-basket_cart, .header .h-wishlist {
   outline: 1px solid #000; }
 
 .wrap::after, .header-top, .header::after, .header .h-basket-list::after, .content::after, .c-categories::after, .c-product::after {

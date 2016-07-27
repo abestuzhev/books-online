@@ -152,6 +152,11 @@ ul {
     float: left;
     @extend %outline;
 
+    .h-basket_cart {
+      @extend %outline;
+
+    }
+
   }
 
   .h-wishlist {
