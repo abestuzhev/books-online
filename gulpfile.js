@@ -38,12 +38,12 @@ gulp.task('browser-sync', function(){
   })
 });
 
-// gulp.task('connect', function() {
-//   connect.server({
-//     root: '',
-//     livereload: true
-//   });
-// });
+gulp.task('connect', function() {
+  connect.server({
+    root: '',
+    livereload: true
+  });
+});
 
 gulp.task('watch', function(){
   gulp.watch(srcDir + 'scss/**/*.scss', ['sass'])

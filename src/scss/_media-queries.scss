@@ -1,8 +1,50 @@
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1060px) {
+  .wrap {
+    width: 98%;
+    padding: 0;
+  }
 
+  .c-product {
+    width: auto;
+    float: none;
+  }
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1010px) {
+  .h-search {
+    display: none;
+  }
+}
 
+@media screen and (max-width: 890px) {
+  .menu .m-list {
+    text-align: left;
+  }
+
+  .header .h-logo {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .c-categories {
+    float: none;
+    width: auto;
+    margin: 0;
+  }
+
+  .c-product {
+    margin: 0;
+  }
+
+  .footer .f-col-4 {
+    width: 50%;
+    margin-bottom: 15px;
+    padding-left: 10px;
+  }
+
+  .footer .f-col-4:nth-child(3), .footer .f-col-4:nth-child(4) {
+    padding-left: 10px;
+  }
 }
